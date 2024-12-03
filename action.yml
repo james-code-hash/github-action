@@ -9,6 +9,14 @@ inputs:
     description: "Version of Redpanda to use"
     required: false
     default: "latest"
+  broker_port:
+    description: "Port to use for the broker"
+    required: false
+    default: "9092"
+  schema_registry_port:
+    description: "Port to use for the schema registry"
+    required: false
+    default: "8081"
 runs:
   using: "docker"
   image: "Dockerfile"
