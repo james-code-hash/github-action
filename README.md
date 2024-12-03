@@ -4,24 +4,26 @@ This [GitHub Action](https://github.com/features/actions) sets up Redpanda insta
 
 Docker images source [redpanda-data/redpanda](docker.vectorized.io/vectorized/redpanda).
 
----------
+---
+
 # Usage
 
 See [action.yml](action.yml)
 
 Basic:
+
 ```yaml
-    - name: start redpanda
-      uses: redpanda-data/github-action@v0.1.3
-      with:
-        version: "latest"
+- name: redpanda-schema-registry-action
+  uses: james-code-hash/github-action@0.2.2
+  with:
+    version: "v24.2.9"
+    broker_port: 19092
+    schema_registry_port: 18081
 ```
 
-Now you should be able to connect to `redpanda` (kafka-api) running at `localhost:9092` 
+Now you should be able to connect to `redpanda` (kafka-api) running at `localhost:19092`
 
-
-----------
-
+---
 
 # About Redpanda
 
@@ -34,18 +36,18 @@ Now you should be able to connect to `redpanda` (kafka-api) running at `localhos
 [<p align="center"><img src="https://raw.githubusercontent.com/redpanda-data/redpanda/dev/docs/PANDA_sitting.jpg" alt="redpanda sitting" width="400"/></p>](https://redpanda.com/redpanda)
 <img src="https://static.scarf.sh/a.png?x-pxid=3c187215-e862-4b67-8057-45aa9a779055" />
 
-Redpanda is a streaming platform for mission critical workloads. Kafka® compatible, 
+Redpanda is a streaming platform for mission critical workloads. Kafka® compatible,
 No Zookeeper®, no JVM, and no code changes required. Use all your favorite open source tooling - 10x faster.
 
-We are building a real-time streaming engine for modern applications - from the 
-enterprise to the solo dev prototyping a react application on her laptop. 
-We go beyond the Kafka protocol, into the future of streaming with inline WASM 
-transforms and geo-replicated hierarchical storage. A new platform that scales with 
+We are building a real-time streaming engine for modern applications - from the
+enterprise to the solo dev prototyping a react application on her laptop.
+We go beyond the Kafka protocol, into the future of streaming with inline WASM
+transforms and geo-replicated hierarchical storage. A new platform that scales with
 you from the smallest projects to petabytes of data distributed across the globe.
 
 # Community
 
-[Slack](https://redpanda.com/slack) is the main way the community interacts with one another in real time :) 
+[Slack](https://redpanda.com/slack) is the main way the community interacts with one another in real time :)
 
 [Github Discussion](https://github.com/redpanda-data/redpanda/discussions) is preferred for longer, async, thoughtful discussions
 
@@ -53,12 +55,11 @@ you from the smallest projects to petabytes of data distributed across the globe
 
 [Code of conduct](https://github.com/redpanda-data/redpanda/CODE_OF_CONDUCT.md) code of conduct for the community
 
-[Contributing docs](https://github.com/redpanda-data/redpanda/CONTRIBUTING.md)  
-
+[Contributing docs](https://github.com/redpanda-data/redpanda/CONTRIBUTING.md)
 
 ## Prebuilt Packages
 
-We recommend using our free & prebuilt stable releases below.  
+We recommend using our free & prebuilt stable releases below.
 
 ### On MacOS
 
@@ -74,7 +75,7 @@ brew install redpanda-data/tap/redpanda && rpk container start
 curl -1sLf \
   'https://packages.vectorized.io/nzc4ZYQK3WRGd9sy/redpanda/cfg/setup/bash.deb.sh' \
   | sudo -E bash
-  
+
 sudo apt-get install redpanda
 ```
 
@@ -84,7 +85,7 @@ sudo apt-get install redpanda
 curl -1sLf \
   'https://packages.vectorized.io/nzc4ZYQK3WRGd9sy/redpanda/cfg/setup/bash.rpm.sh' \
   | sudo -E bash
-  
+
 sudo yum install redpanda
 ```
 
@@ -110,14 +111,13 @@ For those of us who like to live on the edge!
 We can cut a release at any point from the `/dev` branch if you want to test a particular feature.
 Simply let us know you would like to test a feature from dev and we're happy to cut a beta release.
 
-
 ## Beta releases on Debian/Ubuntu
 
 ```
 curl -1sLf \
   'https://packages.vectorized.io/HxYRCzL4xbbaEtPi/redpanda-beta/setup.deb.sh' \
   | sudo -E bash
-  
+
 sudo apt-get install redpanda
 ```
 
@@ -127,7 +127,7 @@ sudo apt-get install redpanda
 curl -1sLf \
   'https://packages.vectorized.io/HxYRCzL4xbbaEtPi/redpanda-beta/setup.rpm.sh' \
   | sudo -E bash
-  
+
 sudo yum install redpanda
 ```
 
@@ -139,4 +139,3 @@ This is an example with the `v21.3.5-beta3` version prior to the 21.3.5 release.
 # example!
 docker.vectorized.io/vectorized/redpanda:v21.3.5-beta3
 ```
-
