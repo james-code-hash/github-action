@@ -1,4 +1,4 @@
-name: "redpanda-action"
+name: "redpanda-schema-registry-action"
 description: "Setup Redpanda"
 author: "fernandes"
 branding:
