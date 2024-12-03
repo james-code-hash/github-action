@@ -20,4 +20,4 @@ inputs:
 runs:
   using: "docker"
   image: "Dockerfile"
-  post-entrypoint: "post-entrypoint.sh"
+  post-entrypoint: "/usr/local/bin/post-entrypoint.sh"
